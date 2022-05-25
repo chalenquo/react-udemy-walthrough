@@ -10,8 +10,23 @@ const personalMovieDB = {
     private: false
 };
 
-let lastFilmName = prompt('Який останній фільм бачили?', '');
-let lastFilmRate = +prompt('На скільки його оціните? (0.0-10.0)', '');
+for (let i = 0; i < 2; i++) {
+    const a = prompt('Який останній фільм бачили?', ''),
+          b = +prompt('На скільки його оціните? (0.0-10.0)', '');
 
-personalMovieDB.movies[lastFilmName] = lastFilmRate;
+    if (a != null && b != null && a !== '' && a.length < 50) {
+        personalMovieDB.movies[a] = b;
+        console.log('done')
+    } else {
+        console.log('error')
+        i--
+    }
+}
+
+let status = (personalMovieDB.count <= 10) ? 'Мало фільмів'
+           : (personalMovieDB.count > 10 && personalMovieDB.count < 30) ? 'Класичний глядач'
+           : 'Кіноман';
+
+
 console.log(personalMovieDB);
+console.log(status)
