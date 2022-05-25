@@ -1,1 +1,3 @@
-console.dir(Number);
+// console.dir(Number);
+
+
