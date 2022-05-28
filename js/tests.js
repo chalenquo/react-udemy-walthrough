@@ -1,15 +1,15 @@
-// console.dir(Number);
-
-// deep clone Object
-const consoleClone = Object.assign({}, console)
-consoleClone.log('123')
-
-// clone Array
-const oldArr = ['a', 'b', 'c'];
-const newArr = oldArr.slice();
-newArr[0] = 'd'
-console.log(oldArr);
-console.log(newArr);
+// // console.dir(Number);
+//
+// // deep clone Object
+// const consoleClone = Object.assign({}, console)
+// consoleClone.log('123')
+//
+// // clone Array
+// const oldArr = ['a', 'b', 'c'];
+// const newArr = oldArr.slice();
+// newArr[0] = 'd'
+// console.log(oldArr);
+// console.log(newArr);
 
 // клонування обʼєнтів:
 // 1 - перший рівень через цикл
@@ -18,3 +18,7 @@ console.log(newArr);
 // клонування масивів:
 // 1 - через Array.slice()
 // 2 - через спред оператори [...array]
+
+let y = 1;
+let x = y = 2
+console.log(2 && 1 && null && 0 && undefined)
