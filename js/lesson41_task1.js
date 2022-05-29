@@ -35,7 +35,6 @@ console.log(isOpen(restorantData.openNow))
 
 function isAverageLunchPriceTrue(fDish, sDish, average) {
     if (+fDish.price.slice(0, -1) + (sDish.price) > average) {
-        return 'Цена ниже средней';
     } else {
         return 'Цена выше средней';
     }
