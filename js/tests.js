@@ -23,35 +23,49 @@
 // let x = y = 2
 // console.log(2 && 1 && null && 0 && undefined)
 
-const obj = {
-    name: 'Sergii',
-    age: 34,
-    car: {
-        brand: 'Opel',
-        model: 'Corsa',
-        engine: 1.4
-    },
-    block: function () {
-        Object.defineProperties(this, {
-            name: {
-                writable: false
-            },
-            age: {
-                writable: false
-            }
-        })
+// const obj = {
+//     name: 'Sergii',
+//     age: 34,
+//     car: {
+//         brand: 'Opel',
+//         model: 'Corsa',
+//         engine: 1.4
+//     },
+//     block: function () {
+//         Object.defineProperties(this, {
+//             name: {
+//                 writable: false
+//             },
+//             age: {
+//                 writable: false
+//             }
+//         })
+//
+//     },
+//     clone: function () {
+//         const objMap = new Map(Object.entries(this))
+//         return Object.fromEntries(objMap)
+//     }
+// }
+//
+// let clone = obj.clone();
+// clone.car.brand = 'BMW'
+// console.log(obj)
+// console.log(clone);
 
-    },
-    clone: function () {
-        const objMap = new Map(Object.entries(this))
-        return Object.fromEntries(objMap)
-    }
+let arr = ['Serg', 'Ostap', 'Yana', 'Luda', 'Serg'];
+
+function arrayUniqueLenght (arr) {
+    return Array.from(new Set(arr)).length;
 }
 
-let clone = obj.clone();
-clone.car.brand = 'BMW'
-console.log(obj)
-console.log(clone);
+console.log(arrayUniqueLenght(arr))
+console.log(Number.MAX_SAFE_INTEGER)
+
+const bigInt = 12389628736547826387465234;
+console.log(bigInt)
+
+console.log(Number)
 
 
 // const clone = Object.assign({}, obj)
